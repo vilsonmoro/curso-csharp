@@ -75,6 +75,40 @@ namespace WindowsFormsApp1
                 conexao.Close();
             }
         }
+
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txFone.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            btnExcluir.Enabled = true;
+           
+        }
+
+        private void BtnExcluir_Click(object sender, EventArgs e)
+        {
+            string strcon = estabeleceConexao();
+            SqlConnection conexao = new SqlConnection(strcon);
+            SqlCommand cmd = new SqlCommand("delete from contatos where id = '" + txId.Text + "'", conexao);
+            try
+            {
+                conexao.Open();
+                cmd.ExecuteNonQuery();
+                BtSelect_Click(sender, e);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro " + ex.Message);
+                throw;
+            }
+            finally
+            {
+                conexao.Close();
+                btnExcluir.Enabled = false;
+                MessageBox.Show("Registro excluído com sucesso");
+            }
+        }
     }
 }
 

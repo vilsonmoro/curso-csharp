@@ -39,6 +39,7 @@
             this.txNome = new System.Windows.Forms.TextBox();
             this.txFone = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -58,6 +59,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(535, 331);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
             // btSelect
             // 
@@ -71,12 +73,14 @@
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.Location = new System.Drawing.Point(603, 58);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 2;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // btnInserir
             // 
@@ -120,11 +124,20 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Fone";
             // 
+            // txId
+            // 
+            this.txId.Location = new System.Drawing.Point(280, 61);
+            this.txId.Name = "txId";
+            this.txId.Size = new System.Drawing.Size(133, 22);
+            this.txId.TabIndex = 8;
+            this.txId.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 450);
+            this.Controls.Add(this.txId);
             this.Controls.Add(this.txFone);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txNome);
@@ -155,6 +168,7 @@
         private System.Windows.Forms.TextBox txNome;
         private System.Windows.Forms.TextBox txFone;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txId;
     }
 }
 
