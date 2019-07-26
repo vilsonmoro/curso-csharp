@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Calculadora;
 
 namespace ConsoleApp1
 {
@@ -10,7 +11,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ola mundo");
+
+
+            Calculos ob = new Calculos();
+            ob.somar(10, 20);
+            somar(40, 50);
+            Console.ReadKey();
+        }
+
+        static void somar(int x, int y)
+        {
+            Console.WriteLine($" Static A soma de {x} e {y} é: {x + y}");
         }
     }
 }

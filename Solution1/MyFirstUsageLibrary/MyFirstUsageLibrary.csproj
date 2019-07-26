@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{937D4A88-5536-417C-A22B-4A6509CCBAC2}</ProjectGuid>
+    <ProjectGuid>{6CC20A5D-4801-42A0-B6DA-8184AC68D36B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp1</RootNamespace>
-    <AssemblyName>ConsoleApp1</AssemblyName>
+    <RootNamespace>MyFirstUsageLibrary</RootNamespace>
+    <AssemblyName>MyFirstUsageLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BibliotecaDeArquivosDoWindows">
+      <HintPath>..\..\..\..\..\..\Downloads\BibliotecaDeArquivosDoWindows.dll</HintPath>
+    </Reference>
+    <Reference Include="Calculadora">
+      <HintPath>..\..\..\..\..\..\Documents\Calculadora.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,12 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Calculadora\Calculadora.csproj">
-      <Project>{a1c7b4b5-64b8-43a8-bd94-d77be43a348e}</Project>
-      <Name>Calculadora</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
