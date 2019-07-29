@@ -16,7 +16,7 @@ namespace Banco
             conta.mostraSaldo();
             Console.ReadKey();
 
-            conta.Cpf = Console.ReadLine();
+           // conta.Cpf = Console.ReadLine();
 
             Console.WriteLine(conta.Saldo);
 

@@ -7,65 +7,73 @@ namespace Cantina
 {
     class Program
     {
+        static List<Lanche> listaLanche = new List<Lanche>();
         static void Main(string[] args)
         {
-            //declara a lista com o tipo de objeto que pode armazenar
-            List<Lanche> listaLanche = new List<Lanche>();
-
-            listaLanche.Add(new Lanche() {
-                Nome = "Pastel",
-                Quantidade = 10,
-                Valor = 2.50
-            });
-
-            listaLanche.Add(new Lanche()
+            var op = 1;
+            while(op != 4)
             {
-                Nome = "Coxinha",
-                Quantidade = 5,
-                Valor = 4.50
-            });
-
-            listaLanche.Add(new Lanche()
-            {
-                Nome = "Empada",
-                Quantidade = 15,
-                Valor = 3
-            });
-
-            //percorre a lista e mostra todos os itens
-            listar(ref listaLanche);
-
-
-            //excluir item conforme quantidade
-            foreach (Lanche item in listaLanche)
-                if (item.Quantidade == 5)
+                op = menu();
+                switch(op)
                 {
-                    listaLanche.Remove(item);
-                    break;
-                }                   
-
-
-            //percorre a lista e mostra todos os itens
-            listar(ref listaLanche);
-
-            //removendo usano metodo da lista e expressão lambda
-            listaLanche.Remove(listaLanche.FirstOrDefault(x => x.Quantidade == 15));
-
-            //listar novamente
-            listar(ref listaLanche);
-
+                    case 1: inserir(); break;
+                    case 2: listar(); break;
+                    case 3:
+                        {
+                            Console.WriteLine("Informe o nome do lanche que deseja excluir");
+                            excluir(Console.ReadLine()); break;
+                        }                   
+                }
+            }
+            
             Console.ReadKey();
         }
 
-        static void listar(ref List<Lanche> lista)
+        private static void inserir()
+        {
+            Console.WriteLine("Informe nome, quantidade e preço");
+            listaLanche.Add(new Lanche() { Nome = Console.ReadLine(),
+                                           Quantidade = Convert.ToInt32(Console.ReadLine()),
+                                           Valor = Convert.ToDouble(Console.ReadLine())
+                                          });
+        }
+
+        static void excluir(string lanche)
+        {
+            //excluir item conforme quantidade
+            foreach (Lanche item in listaLanche)
+                if (item.Nome.ToLower() == lanche.ToLower())
+                {
+                    listaLanche.Remove(item);
+                    break;
+                }
+        }
+
+        static void listar()
         {
             Console.WriteLine(" Display de dados");
-            foreach (Lanche item in lista)
+            foreach (Lanche item in listaLanche)
             {
                 Console.WriteLine($"Nome: {item.Nome}");
                 Console.WriteLine($"Qtde: {item.Quantidade}");
                 Console.WriteLine($"Valor: {item.Valor}\n");
             }
+            Console.ReadKey();
+        }
+
+
+        static int menu()
+        {
+            Console.Clear();
+            Console.WriteLine("1 - Inserir ");
+            Console.WriteLine("2 - Listar ");
+            Console.WriteLine("3 - Excluir ");
+            Console.WriteLine("4 - Sair");
+
+            Console.WriteLine("Informe uma opção: ");
+            int.TryParse(Console.ReadLine(), out int opcao);
+            return opcao;
+
         }
     }
 }
