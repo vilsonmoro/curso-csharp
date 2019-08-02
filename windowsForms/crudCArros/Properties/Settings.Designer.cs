@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Cadastro.Properties {
+namespace crudCArros.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -31,17 +31,6 @@ namespace Cadastro.Properties {
         public string queryInnerJoinConnectionString {
             get {
                 return ((string)(this["queryInnerJoinConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Agenda;Integrated Security=Tru" +
-            "e")]
-        public string AgendaConnectionString {
-            get {
-                return ((string)(this["AgendaConnectionString"]));
             }
         }
     }

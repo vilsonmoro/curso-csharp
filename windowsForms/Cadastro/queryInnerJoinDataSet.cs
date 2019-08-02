@@ -1,0 +1,7 @@
+﻿namespace Cadastro
+{
+}
+
+namespace Cadastro
+{
+}

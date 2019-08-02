@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro", "Cadastro\Cadastro.csproj", "{93CD84CC-8D7B-4F98-976E-0B25A2F903EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsultaCarros", "ConsultaCarros\ConsultaCarros.csproj", "{4401C779-CE27-4885-BC06-EE413372C62A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crudCArros", "crudCArros\crudCArros.csproj", "{DF64D458-3DEF-4D1F-B2E6-3DA35AD4A36C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{93CD84CC-8D7B-4F98-976E-0B25A2F903EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93CD84CC-8D7B-4F98-976E-0B25A2F903EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93CD84CC-8D7B-4F98-976E-0B25A2F903EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4401C779-CE27-4885-BC06-EE413372C62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4401C779-CE27-4885-BC06-EE413372C62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4401C779-CE27-4885-BC06-EE413372C62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4401C779-CE27-4885-BC06-EE413372C62A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF64D458-3DEF-4D1F-B2E6-3DA35AD4A36C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF64D458-3DEF-4D1F-B2E6-3DA35AD4A36C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF64D458-3DEF-4D1F-B2E6-3DA35AD4A36C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF64D458-3DEF-4D1F-B2E6-3DA35AD4A36C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

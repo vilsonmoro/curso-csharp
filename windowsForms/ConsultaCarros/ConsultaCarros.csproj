@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{93CD84CC-8D7B-4F98-976E-0B25A2F903EF}</ProjectGuid>
+    <ProjectGuid>{4401C779-CE27-4885-BC06-EE413372C62A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Cadastro</RootNamespace>
-    <AssemblyName>Cadastro</AssemblyName>
+    <RootNamespace>ConsultaCarros</RootNamespace>
+    <AssemblyName>ConsultaCarros</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,23 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgendaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AgendaDataSet.xsd</DependentUpon>
+    <Compile Include="EditaUser.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Classes\Contato.cs" />
+    <Compile Include="EditaUser.Designer.cs">
+      <DependentUpon>EditaUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="FormMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FormMarcas.Designer.cs">
+      <DependentUpon>FormMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditaCarro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditaCarro.Designer.cs">
+      <DependentUpon>frmEditaCarro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FromVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FromVendas.Designer.cs">
+      <DependentUpon>FromVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="insert\FormInsertUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="insert\FormInsertUser.Designer.cs">
+      <DependentUpon>FormInsertUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,11 +98,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>queryInnerJoinDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EditaUser.resx">
+      <DependentUpon>EditaUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FormMarcas.resx">
+      <DependentUpon>FormMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditaCarro.resx">
+      <DependentUpon>frmEditaCarro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FromVendas.resx">
+      <DependentUpon>FromVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="insert\FormInsertUser.resx">
+      <DependentUpon>FormInsertUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -89,17 +128,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="AgendaDataSet.xsc">
-      <DependentUpon>AgendaDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AgendaDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AgendaDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AgendaDataSet.xss">
-      <DependentUpon>AgendaDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
