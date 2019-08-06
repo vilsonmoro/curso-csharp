@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsultaCarros", "ConsultaC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crudCArros", "crudCArros\crudCArros.csproj", "{DF64D458-3DEF-4D1F-B2E6-3DA35AD4A36C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteSession", "TesteSession\TesteSession.csproj", "{8663068B-8488-4FF2-A6ED-FC587BC383C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{DF64D458-3DEF-4D1F-B2E6-3DA35AD4A36C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF64D458-3DEF-4D1F-B2E6-3DA35AD4A36C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF64D458-3DEF-4D1F-B2E6-3DA35AD4A36C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8663068B-8488-4FF2-A6ED-FC587BC383C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8663068B-8488-4FF2-A6ED-FC587BC383C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8663068B-8488-4FF2-A6ED-FC587BC383C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8663068B-8488-4FF2-A6ED-FC587BC383C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
