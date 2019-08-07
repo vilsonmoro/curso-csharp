@@ -13,26 +13,13 @@ namespace MyFirstUsageLibrary
         {
             GetFiles gf = new GetFiles();
 
-            imprimirArquivos(gf.RetornaArquivosImagesFiles());
+            string[] listaDoc = gf.RetornaArquivosDoMeuDocumentos();
 
-            imprimirArquivos(gf.RetornaArquivosGit());
-
-            imprimirArquivos(gf.RetornaArquivosImagesFiles());
-        }
-
-        static void imprimirArquivos(string[] lista)
-        {
-            if (lista == null)
+            for (int i = 0; i < listaDoc.Length; i++)
             {
-                Console.WriteLine("Não existem dados para exibir");
+                Console.WriteLine(listaDoc[i]);   
             }
-            else
-            {
-                for (int i = 0; i < lista.Length; i++)
-                {
-                    Console.WriteLine(lista[i]);
-                }
-            }
+
             Console.ReadKey();
         }
     }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9B7A52C9-16A9-4FB3-A0B2-FD166599C07E}</ProjectGuid>
+    <ProjectGuid>{6CC20A5D-4801-42A0-B6DA-8184AC68D36B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>MyFirstUsageLibrary</RootNamespace>
     <AssemblyName>MyFirstUsageLibrary</AssemblyName>
@@ -34,7 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BibliotecaDeArquivosDoWindows">
-      <HintPath>..\..\..\..\..\Downloads\BibliotecaDeArquivosDoWindows.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Downloads\BibliotecaDeArquivosDoWindows.dll</HintPath>
+    </Reference>
+    <Reference Include="Calculadora">
+      <HintPath>..\..\..\..\..\..\Documents\Calculadora.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
