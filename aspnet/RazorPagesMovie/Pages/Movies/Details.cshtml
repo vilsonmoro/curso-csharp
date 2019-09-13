@@ -1,0 +1,43 @@
+﻿@page
+@model RazorPagesMovie.Pages.Movies.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Movei</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Movei.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Movei.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Movei.ReleaseDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Movei.ReleaseDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Movei.Genre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Movei.Genre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Movei.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Movei.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Movei.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
